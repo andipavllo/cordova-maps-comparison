@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' 'self'; script-src * 'unsafe-inline' 'unsafe-eval' blob:; img-src * 'self' data: blob:;"/>
+  <script src="components/loader.js"></script>
+  <script src="src/js/main.js"></script>
+  <script src="lib/onsenui/js/onsenui.min.js"></script>
+
+  <link rel="stylesheet" href="components/loader.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+  <link rel="stylesheet" href="src/css/style.css">
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.41.0/mapbox-gl.css' rel='stylesheet' />
+
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.41.0/mapbox-gl.js'></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=MY_KEY">
+  </script>
+</head>
+<body>
+  <ons-page>
+    <ons-toolbar>
+      <div class="center" id="toolbar-title">Maps Comparison</div>
+    </ons-toolbar>
+    <ons-tabbar id="tab" position="auto">
+      <ons-tab label="Google Cordova" page="tab1.html" active>
+      </ons-tab>
+      <ons-tab label="Google JS" page="tab2.html">
+      </ons-tab>
+      <ons-tab label="Mapbox JS API" page="tab3.html">
+      </ons-tab>
+    </ons-tabbar>
+    <div class="zoom-in-btn">
+      <ons-button onClick="zoomIn()">Zoom In</ons-button>
+    </div>
+    <div class="zoom-out-btn">
+      <ons-button onClick="zoomOut()">Zoom Out</ons-button>
+    </div>
+  </ons-page>
+
+  <ons-template id="tab1.html">
+    <ons-page id="first-page">
+      <div id="gm_cordova" class="map-container"></div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="tab2.html">
+    <ons-page id="second-page">
+      <div id="gm_js" class="map-container">
+        <div></div>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="tab3.html">
+    <ons-page id="third-page">
+      <div id="mapbox_js" class="map-container"></div>
+    </ons-page>
+  </ons-template>
+</body>
+</html>

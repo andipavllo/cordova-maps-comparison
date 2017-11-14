@@ -1,0 +1,18 @@
+.zoom-in-btn {
+  position: absolute;
+  bottom: 40px;
+  left: 20%;
+  z-index: 10000000;
+}
+
+.zoom-out-btn {
+  position: absolute;
+  bottom: 40px;
+  right: 20%;
+  z-index: 10000000;
+}
+
+.map-container {
+  width: 100%;
+  height: 100%;
+}
