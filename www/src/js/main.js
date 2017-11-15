@@ -3,24 +3,24 @@ var testLat = 35.6895,
 
 var tab, mapbox, googleMapsJs;
 
-document.addEventListener("deviceready", function() {
-  ons.ready(function() {
-    var secondPage = document.getElementById("first-page");
+ons.ready(function() {
+  var secondPage = document.getElementById("first-page");
 
-    // Needed to be able to see the Cordova GM on Onsen UI
-    if (secondPage) {
-      secondPage.firstElementChild.style.backgroundColor = "rgba(0, 0, 0, 0)";
-    }
+  // Needed to be able to see the Cordova GM on Onsen UI
+  if (secondPage) {
+    secondPage.firstElementChild.style.backgroundColor = "rgba(0, 0, 0, 0)";
+  }
 
-    var modElement = document.getElementsByClassName("page--material__background");
-    modElement[0].style.backgroundColor = "rgba(0, 0, 0, 0)";
+  var modElement = document.getElementsByClassName("page--material__background");
+  modElement[0].style.backgroundColor = "rgba(0, 0, 0, 0)";
 
-    tab = document.getElementById("tab");
+  tab = document.getElementById("tab");
 
+  if (!!window.cordova) {
     initGoogleMapsCordova();
-    initMapbox();
-  })
-}, false);
+  }
+  initMapbox();
+})
 
 function initGoogleMapsJS() {
     googleMapsJs = new google.maps.Map(document.getElementById('gm_js'), {
