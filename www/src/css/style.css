@@ -1,13 +1,13 @@
 .zoom-in-btn {
   position: absolute;
-  bottom: 40px;
+  bottom: 10%;
   left: 20%;
   z-index: 10000000;
 }
 
 .zoom-out-btn {
   position: absolute;
-  bottom: 40px;
+  bottom: 10%;
   right: 20%;
   z-index: 10000000;
 }
